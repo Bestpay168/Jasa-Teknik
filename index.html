@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#0f172a"
+    >
+
+    <meta
+        name="description"
+        content="JASA TEKNIK - Pesan teknisi terpercaya untuk listrik, AC, pompa air, plumbing, dan perbaikan rumah."
+    >
+
+    <title>
+        JASA TEKNIK — Teknisi Terpercaya
+    </title>
+
+
+    <!-- =================================================
+         ICON
+    ================================================== -->
+
+    <link
+        rel="icon"
+        href="assets/icon.png"
+    >
+
+
+    <!-- =================================================
+         CSS
+    ================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+
+    <!-- =================================================
+         SUPABASE
+    ================================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================================
+         APP
+    ================================================== -->
+
+    <div class="app">
+
+
+        <!-- =================================================
+             HEADER
+        ================================================== -->
+
+        <header class="header">
+
+            <div class="header-inner">
+
+
+                <a
+                    href="#home"
+                    class="brand"
+                    aria-label="JASA TEKNIK"
+                >
+
+                    <div class="brand-icon">
+                        🔧
+                    </div>
+
+                    <div class="brand-text">
+
+                        <strong>
+                            JASA TEKNIK
+                        </strong>
+
+                        <span>
+                            Teknisi terpercaya
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <button
+                    type="button"
+                    class="icon-button"
+                    id="notificationButton"
+                    aria-label="Notifikasi"
+                >
+                    🔔
+
+                    <span
+                        class="notification-dot"
+                        id="notificationDot"
+                    ></span>
+
+                </button>
+
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             MAIN
+        ================================================== -->
+
+        <main>
+
+
+            <!-- =================================================
+                 HOME
+            ================================================== -->
+
+            <section
+                class="page-section hero-section"
+                id="home"
+            >
+
+                <div class="hero-content">
+
+                    <span class="hero-badge">
+                        🛠️ Teknisi Profesional
+                    </span>
+
+                    <h1>
+                        Masalah Teknik?
+                        <br>
+                        <strong>Kami Bantu Beres.</strong>
+                    </h1>
+
+                    <p>
+                        Pesan teknisi untuk kebutuhan rumah
+                        tanpa ribet.
+                    </p>
+
+
+                    <!-- SEARCH -->
+
+                    <div class="search-box">
+
+                        <span class="search-icon">
+                            🔍
+                        </span>
+
+                        <input
+                            type="search"
+                            id="serviceSearch"
+                            placeholder="Cari jasa teknik..."
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 CATEGORY
+            ================================================== -->
+
+            <section
+                class="page-section"
+                id="categories"
+            >
+
+                <div class="section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            LAYANAN
+                        </span>
+
+                        <h2>
+                            Pilih Kebutuhan
+                        </h2>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="text-button"
+                        id="allServicesButton"
+                    >
+                        Lihat Semua
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="category-grid"
+                    id="categoryGrid"
+                >
+
+                    <button
+                        type="button"
+                        class="category-card"
+                        data-category="Listrik"
+                    >
+
+                        <span class="category-icon">
+                            ⚡
+                        </span>
+
+                        <strong>
+                            Listrik
+                        </strong>
+
+                        <small>
+                            Instalasi & perbaikan
+                        </small>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="category-card"
+                        data-category="AC"
+                    >
+
+                        <span class="category-icon">
+                            ❄️
+                        </span>
+
+                        <strong>
+                            AC
+                        </strong>
+
+                        <small>
+                            Service & cuci
+                        </small>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="category-card"
+                        data-category="Pompa Air"
+                    >
+
+                        <span class="category-icon">
+                            🚰
+                        </span>
+
+                        <strong>
+                            Pompa Air
+                        </strong>
+
+                        <small>
+                            Service & instalasi
+                        </small>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="category-card"
+                        data-category="Plumbing"
+                    >
+
+                        <span class="category-icon">
+                            🔧
+                        </span>
+
+                        <strong>
+                            Plumbing
+                        </strong>
+
+                        <small>
+                            Pipa & saluran
+                        </small>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="category-card"
+                        data-category="Perbaikan Rumah"
+                    >
+
+                        <span class="category-icon">
+                            🏠
+                        </span>
+
+                        <strong>
+                            Rumah
+                        </strong>
+
+                        <small>
+                            Perbaikan umum
+                        </small>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="category-card"
+                        data-category="Lainnya"
+                    >
+
+                        <span class="category-icon">
+                            🛠️
+                        </span>
+
+                        <strong>
+                            Lainnya
+                        </strong>
+
+                        <small>
+                            Kebutuhan teknik
+                        </small>
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 QUICK SERVICE
+            ================================================== -->
+
+            <section
+                class="page-section"
+                id="services"
+            >
+
+                <div class="section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            JASA TEKNIK
+                        </span>
+
+                        <h2>
+                            Layanan Populer
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="service-list"
+                    id="serviceList"
+                >
+
+                    <!--
+                        Data layanan akan dimuat
+                        dari Supabase.
+                    -->
+
+
+                    <article class="service-card">
+
+                        <div class="service-card-icon">
+                            ⚡
+                        </div>
+
+                        <div class="service-card-content">
+
+                            <span class="service-category">
+                                LISTRIK
+                            </span>
+
+                            <h3>
+                                Perbaikan Listrik
+                            </h3>
+
+                            <p>
+                                Lampu, saklar, stop kontak,
+                                MCB dan instalasi.
+                            </p>
+
+                            <div class="service-card-bottom">
+
+                                <strong>
+                                    Mulai Rp50.000
+                                </strong>
+
+                                <button
+                                    type="button"
+                                    class="service-button"
+                                    data-service="Perbaikan Listrik"
+                                >
+                                    Pesan
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="service-card">
+
+                        <div class="service-card-icon">
+                            ❄️
+                        </div>
+
+                        <div class="service-card-content">
+
+                            <span class="service-category">
+                                AC
+                            </span>
+
+                            <h3>
+                                Service AC
+                            </h3>
+
+                            <p>
+                                AC tidak dingin, bocor,
+                                berisik atau tidak menyala.
+                            </p>
+
+                            <div class="service-card-bottom">
+
+                                <strong>
+                                    Mulai Rp75.000
+                                </strong>
+
+                                <button
+                                    type="button"
+                                    class="service-button"
+                                    data-service="Service AC"
+                                >
+                                    Pesan
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="service-card">
+
+                        <div class="service-card-icon">
+                            🚰
+                        </div>
+
+                        <div class="service-card-content">
+
+                            <span class="service-category">
+                                POMPA AIR
+                            </span>
+
+                            <h3>
+                                Service Pompa Air
+                            </h3>
+
+                            <p>
+                                Pompa macet, lemah,
+                                tidak menyala atau bocor.
+                            </p>
+
+                            <div class="service-card-bottom">
+
+                                <strong>
+                                    Mulai Rp50.000
+                                </strong>
+
+                                <button
+                                    type="button"
+                                    class="service-button"
+                                    data-service="Service Pompa Air"
+                                >
+                                    Pesan
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <div
+                    class="empty-state"
+                    id="serviceEmptyState"
+                    hidden
+                >
+
+                    <div class="empty-icon">
+                        🔍
+                    </div>
+
+                    <h3>
+                        Jasa tidak ditemukan
+                    </h3>
+
+                    <p>
+                        Coba gunakan kata pencarian lain.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 TECHNICIANS
+            ================================================== -->
+
+            <section
+                class="page-section"
+                id="technicians"
+            >
+
+                <div class="section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            TEKNISI
+                        </span>
+
+                        <h2>
+                            Teknisi Pilihan
+                        </h2>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="text-button"
+                        id="allTechniciansButton"
+                    >
+                        Lihat Semua
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="technician-list"
+                    id="technicianList"
+                >
+
+                    <!-- Teknisi akan dimuat dari Supabase -->
+
+
+                    <article class="technician-card">
+
+                        <div class="technician-avatar">
+                            👨‍🔧
+                        </div>
+
+                        <div class="technician-info">
+
+                            <div class="technician-name">
+
+                                <h3>
+                                    Teknisi Terdekat
+                                </h3>
+
+                                <span class="verified">
+                                    ✓
+                                </span>
+
+                            </div>
+
+                            <div class="technician-meta">
+
+                                ⭐ 5.0
+
+                                <span>
+                                    •
+                                </span>
+
+                                <span>
+                                    Teknisi terverifikasi
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Teknisi profesional siap
+                                menerima pekerjaan Anda.
+                            </p>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            class="small-button"
+                            data-action="find-technician"
+                        >
+                            Pesan
+                        </button>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 HOW IT WORKS
+            ================================================== -->
+
+            <section
+                class="page-section how-section"
+                id="how"
+            >
+
+                <div class="section-header centered">
+
+                    <div>
+
+                        <span class="section-label">
+                            CARA KERJA
+                        </span>
+
+                        <h2>
+                            Pesan Teknisi
+                            <br>
+                            Semudah Ini
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="steps">
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            1
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Pilih Jasa
+                            </h3>
+
+                            <p>
+                                Pilih kategori dan
+                                masalah Anda.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            2
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Tentukan Jadwal
+                            </h3>
+
+                            <p>
+                                Pilih waktu teknisi
+                                datang ke lokasi.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            3
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Teknisi Datang
+                            </h3>
+
+                            <p>
+                                Teknisi melakukan
+                                pemeriksaan dan perbaikan.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            4
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Selesai
+                            </h3>
+
+                            <p>
+                                Bayar dan berikan
+                                rating kepada teknisi.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 TRUST
+            ================================================== -->
+
+            <section
+                class="page-section trust-section"
+            >
+
+                <div class="trust-grid">
+
+                    <div class="trust-item">
+
+                        <span>
+                            ✓
+                        </span>
+
+                        <strong>
+                            Teknisi Terverifikasi
+                        </strong>
+
+                        <small>
+                            Kami melakukan verifikasi
+                            sebelum teknisi menerima order.
+                        </small>
+
+                    </div>
+
+
+                    <div class="trust-item">
+
+                        <span>
+                            ⭐
+                        </span>
+
+                        <strong>
+                            Rating Transparan
+                        </strong>
+
+                        <small>
+                            Lihat pengalaman pelanggan
+                            sebelum memilih teknisi.
+                        </small>
+
+                    </div>
+
+
+                    <div class="trust-item">
+
+                        <span>
+                            🛡️
+                        </span>
+
+                        <strong>
+                            Aman & Terpantau
+                        </strong>
+
+                        <small>
+                            Status pekerjaan dapat
+                            dipantau melalui aplikasi.
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 BECOME TECHNICIAN
+            ================================================== -->
+
+            <section
+                class="page-section technician-cta"
+                id="join"
+            >
+
+                <div class="cta-content">
+
+                    <span class="cta-icon">
+                        👨‍🔧
+                    </span>
+
+                    <h2>
+                        Anda seorang teknisi?
+                    </h2>
+
+                    <p>
+                        Dapatkan pelanggan baru dan
+                        kembangkan usaha Anda bersama
+                        JASA TEKNIK.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="primary-button"
+                        id="joinTechnicianButton"
+                    >
+                        Daftar Jadi Teknisi
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 FOOTER
+            ================================================== -->
+
+            <footer class="footer">
+
+                <div class="footer-brand">
+
+                    <div class="brand-icon">
+                        🔧
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            JASA TEKNIK
+                        </strong>
+
+                        <p>
+                            Solusi teknik untuk rumah Anda.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <a href="#home">
+                        Beranda
+                    </a>
+
+                    <a href="#services">
+                        Jasa
+                    </a>
+
+                    <a href="#technicians">
+                        Teknisi
+                    </a>
+
+                    <a href="#how">
+                        Cara Kerja
+                    </a>
+
+                </div>
+
+
+                <p class="copyright">
+                    © 2026 JASA TEKNIK.
+                    Semua hak dilindungi.
+                </p>
+
+            </footer>
+
+        </main>
+
+
+
+        <!-- =================================================
+             BOTTOM NAVIGATION
+        ================================================== -->
+
+        <nav
+            class="bottom-nav"
+            id="bottomNav"
+        >
+
+            <button
+                type="button"
+                class="bottom-nav-item active"
+                data-target="home"
+            >
+
+                <span>
+                    🏠
+                </span>
+
+                <small>
+                    Beranda
+                </small>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="bottom-nav-item"
+                data-target="services"
+            >
+
+                <span>
+                    🔧
+                </span>
+
+                <small>
+                    Jasa
+                </small>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="bottom-nav-item"
+                data-target="technicians"
+            >
+
+                <span>
+                    👨‍🔧
+                </span>
+
+                <small>
+                    Teknisi
+                </small>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="bottom-nav-item"
+                data-target="orders"
+            >
+
+                <span>
+                    📋
+                </span>
+
+                <small>
+                    Pesanan
+                </small>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="bottom-nav-item"
+                data-target="profile"
+            >
+
+                <span>
+                    👤
+                </span>
+
+                <small>
+                    Profil
+                </small>
+
+            </button>
+
+        </nav>
+
+
+
+        <!-- =================================================
+             BOOKING MODAL
+        ================================================== -->
+
+        <div
+            class="modal"
+            id="bookingModal"
+            aria-hidden="true"
+        >
+
+            <div class="modal-overlay"></div>
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            BOOKING
+                        </span>
+
+                        <h2 id="bookingTitle">
+                            Pesan Jasa
+                        </h2>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="modal-close"
+                        data-close-modal="bookingModal"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+
+                <form
+                    id="bookingForm"
+                    class="booking-form"
+                >
+
+                    <input
+                        type="hidden"
+                        id="selectedService"
+                    >
+
+
+                    <div class="form-group">
+
+                        <label for="customerName">
+                            Nama
+                        </label>
+
+                        <input
+                            type="text"
+                            id="customerName"
+                            placeholder="Nama Anda"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="customerPhone">
+                            Nomor WhatsApp
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="customerPhone"
+                            placeholder="08xxxxxxxxxx"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="problemDescription">
+                            Masalah
+                        </label>
+
+                        <textarea
+                            id="problemDescription"
+                            rows="4"
+                            placeholder="Jelaskan masalah yang terjadi..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="customerAddress">
+                            Alamat
+                        </label>
+
+                        <textarea
+                            id="customerAddress"
+                            rows="3"
+                            placeholder="Alamat lengkap lokasi..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="scheduleDate">
+                            Jadwal Kunjungan
+                        </label>
+
+                        <input
+                            type="datetime-local"
+                            id="scheduleDate"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Foto Kerusakan
+                        </label>
+
+                        <label
+                            class="upload-box"
+                            for="problemPhoto"
+                        >
+
+                            <span>
+                                📷
+                            </span>
+
+                            <strong>
+                                Tambahkan foto
+                            </strong>
+
+                            <small>
+                                Foto membantu teknisi
+                                memahami masalah.
+                            </small>
+
+                        </label>
+
+                        <input
+                            type="file"
+                            id="problemPhoto"
+                            accept="image/*"
+                            hidden
+                        >
+
+                    </div>
+
+
+                    <div class="estimate-box">
+
+                        <span>
+                            Estimasi biaya
+                        </span>
+
+                        <strong id="estimatedPrice">
+                            Menunggu pemeriksaan
+                        </strong>
+
+                        <small>
+                            Harga final dapat berubah
+                            setelah pemeriksaan teknisi.
+                        </small>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="primary-button full-width"
+                    >
+                        Cari Teknisi
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             NOTIFICATION MODAL
+        ================================================== -->
+
+        <div
+            class="modal"
+            id="notificationModal"
+            aria-hidden="true"
+        >
+
+            <div class="modal-overlay"></div>
+
+            <div class="modal-content small-modal">
+
+                <div class="modal-header">
+
+                    <h2>
+                        Notifikasi
+                    </h2>
+
+                    <button
+                        type="button"
+                        class="modal-close"
+                        data-close-modal="notificationModal"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+                <div
+                    class="notification-list"
+                    id="notificationList"
+                >
+
+                    <div class="empty-state">
+
+                        <div class="empty-icon">
+                            🔔
+                        </div>
+
+                        <h3>
+                            Belum ada notifikasi
+                        </h3>
+
+                        <p>
+                            Informasi pesanan akan muncul
+                            di sini.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             ORDERS MODAL
+        ================================================== -->
+
+        <div
+            class="modal"
+            id="ordersModal"
+            aria-hidden="true"
+        >
+
+            <div class="modal-overlay"></div>
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            PESANAN
+                        </span>
+
+                        <h2>
+                            Pesanan Saya
+                        </h2>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="modal-close"
+                        data-close-modal="ordersModal"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="orders-list"
+                    id="ordersList"
+                >
+
+                    <div class="empty-state">
+
+                        <div class="empty-icon">
+                            📋
+                        </div>
+
+                        <h3>
+                            Belum ada pesanan
+                        </h3>
+
+                        <p>
+                            Pesanan Anda akan muncul di sini.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PROFILE MODAL
+        ================================================== -->
+
+        <div
+            class="modal"
+            id="profileModal"
+            aria-hidden="true"
+        >
+
+            <div class="modal-overlay"></div>
+
+            <div class="modal-content small-modal">
+
+                <div class="modal-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            AKUN
+                        </span>
+
+                        <h2>
+                            Profil Saya
+                        </h2>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="modal-close"
+                        data-close-modal="profileModal"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+
+                <div class="profile-content">
+
+                    <div class="profile-avatar">
+                        👤
+                    </div>
+
+                    <h3 id="profileName">
+                        Pelanggan
+                    </h3>
+
+                    <p id="profilePhone">
+                        Belum ada data
+                    </p>
+
+                    <button
+                        type="button"
+                        class="secondary-button"
+                        id="editProfileButton"
+                    >
+                        Edit Profil
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             TOAST
+        ================================================== -->
+
+        <div
+            class="toast"
+            id="toast"
+            role="status"
+            aria-live="polite"
+        ></div>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         JAVASCRIPT
+    ================================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
