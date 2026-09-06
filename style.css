@@ -1,0 +1,1771 @@
+/* =========================================================
+   JASA TEKNIK
+   style.css
+   Mobile First • Responsive • Premium • Clean
+========================================================= */
+
+/* =========================================================
+   1. RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    background: #f8fafc;
+    color: #0f172a;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding-bottom: 78px;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    border: 0;
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+/* =========================================================
+   2. VARIABLES
+========================================================= */
+
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --primary-light: #eff6ff;
+
+    --dark: #0f172a;
+    --dark-2: #1e293b;
+
+    --text: #334155;
+    --muted: #64748b;
+
+    --white: #ffffff;
+    --bg: #f8fafc;
+    --card: #ffffff;
+
+    --border: #e2e8f0;
+
+    --success: #16a34a;
+    --success-light: #f0fdf4;
+
+    --warning: #d97706;
+    --warning-light: #fffbeb;
+
+    --danger: #dc2626;
+    --danger-light: #fef2f2;
+
+    --radius-sm: 10px;
+    --radius: 16px;
+    --radius-lg: 22px;
+
+    --shadow-sm:
+        0 2px 8px rgba(15, 23, 42, 0.05);
+
+    --shadow:
+        0 8px 30px rgba(15, 23, 42, 0.08);
+
+    --shadow-lg:
+        0 18px 50px rgba(15, 23, 42, 0.15);
+
+    --container: 1180px;
+}
+
+/* =========================================================
+   3. CONTAINER
+========================================================= */
+
+.container {
+    width: min(100% - 32px, var(--container));
+    margin-inline: auto;
+}
+
+/* =========================================================
+   4. HEADER
+========================================================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.header-inner {
+    min-height: 68px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+}
+
+.logo-title {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--dark);
+}
+
+.logo-subtitle {
+    font-size: 11px;
+    color: var(--muted);
+    font-weight: 500;
+}
+
+.notification-btn {
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 12px;
+    background: #f1f5f9;
+    color: var(--dark);
+
+    font-size: 18px;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.notification-btn:active {
+    transform: scale(0.94);
+}
+
+.notification-btn:hover {
+    background: #e2e8f0;
+}
+
+/* =========================================================
+   5. HERO
+========================================================= */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0f172a 0%,
+            #172554 55%,
+            #1d4ed8 100%
+        );
+
+    color: white;
+    padding: 44px 0 42px;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    right: -90px;
+    top: -80px;
+
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+
+    width: 160px;
+    height: 160px;
+
+    left: -80px;
+    bottom: -90px;
+
+    border-radius: 50%;
+    background: rgba(96, 165, 250, 0.12);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 7px 12px;
+
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+
+    border-radius: 999px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    margin-bottom: 16px;
+}
+
+.hero h1 {
+    max-width: 650px;
+
+    font-size: clamp(32px, 8vw, 58px);
+    line-height: 1.08;
+    letter-spacing: -1.5px;
+
+    margin-bottom: 14px;
+}
+
+.hero p {
+    max-width: 600px;
+
+    color: #cbd5e1;
+    font-size: 15px;
+
+    margin-bottom: 24px;
+}
+
+/* =========================================================
+   6. SEARCH
+========================================================= */
+
+.search-box {
+    position: relative;
+    max-width: 620px;
+}
+
+.search-box input {
+    width: 100%;
+
+    height: 54px;
+
+    border: 0;
+    outline: none;
+
+    border-radius: 15px;
+
+    padding: 0 18px 0 48px;
+
+    background: #ffffff;
+    color: var(--dark);
+
+    box-shadow: var(--shadow-lg);
+}
+
+.search-box input::placeholder {
+    color: #94a3b8;
+}
+
+.search-icon {
+    position: absolute;
+
+    left: 17px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #64748b;
+    font-size: 18px;
+
+    pointer-events: none;
+}
+
+/* =========================================================
+   7. SECTION
+========================================================= */
+
+.section {
+    padding: 42px 0;
+}
+
+.section-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 23px;
+    line-height: 1.2;
+    font-weight: 800;
+
+    color: var(--dark);
+}
+
+.section-subtitle {
+    margin-top: 5px;
+
+    font-size: 13px;
+    color: var(--muted);
+}
+
+/* =========================================================
+   8. CATEGORY
+========================================================= */
+
+.category-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+.category-card {
+    min-height: 92px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 14px 8px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    color: var(--dark);
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.category-icon {
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--primary-light);
+
+    border-radius: 12px;
+
+    font-size: 20px;
+}
+
+.category-card span:last-child {
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.category-card:hover,
+.category-card.active {
+    border-color: #93c5fd;
+    background: #f8fbff;
+
+    box-shadow:
+        0 8px 25px rgba(37, 99, 235, 0.1);
+
+    transform: translateY(-2px);
+}
+
+.category-card:active {
+    transform: scale(0.97);
+}
+
+/* =========================================================
+   9. SERVICES
+========================================================= */
+
+.service-list {
+    display: grid;
+    gap: 14px;
+}
+
+.service-card {
+    position: relative;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    padding: 18px;
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.service-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-bottom: 12px;
+}
+
+.service-icon {
+    width: 48px;
+    height: 48px;
+
+    flex: 0 0 48px;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--primary-light);
+
+    border-radius: 13px;
+
+    font-size: 23px;
+}
+
+.service-info {
+    flex: 1;
+}
+
+.service-name {
+    font-size: 16px;
+    font-weight: 800;
+
+    color: var(--dark);
+
+    margin-bottom: 3px;
+}
+
+.service-description {
+    color: var(--muted);
+    font-size: 12px;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.service-price {
+    margin-top: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+}
+
+.price-label {
+    font-size: 11px;
+    color: var(--muted);
+}
+
+.price {
+    display: block;
+
+    font-size: 17px;
+    font-weight: 800;
+
+    color: var(--primary);
+}
+
+.service-btn {
+    min-height: 40px;
+
+    padding: 0 15px;
+
+    background: var(--primary);
+    color: white;
+
+    border-radius: 11px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.service-btn:hover {
+    background: var(--primary-dark);
+}
+
+.service-btn:active {
+    transform: scale(0.96);
+}
+
+/* =========================================================
+   10. EMPTY STATE
+========================================================= */
+
+.empty-state {
+    padding: 35px 20px;
+
+    text-align: center;
+
+    background: white;
+
+    border: 1px dashed var(--border);
+
+    border-radius: var(--radius);
+}
+
+.empty-icon {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.empty-state h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.empty-state p {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+/* =========================================================
+   11. TECHNICIANS
+========================================================= */
+
+.technician-list {
+    display: grid;
+    gap: 14px;
+}
+
+.technician-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    padding: 15px;
+
+    box-shadow: var(--shadow-sm);
+}
+
+.technician-photo {
+    width: 58px;
+    height: 58px;
+
+    flex: 0 0 58px;
+
+    border-radius: 16px;
+
+    object-fit: cover;
+
+    background: #e2e8f0;
+}
+
+.technician-info {
+    min-width: 0;
+    flex: 1;
+}
+
+.technician-name {
+    font-size: 15px;
+    font-weight: 800;
+
+    color: var(--dark);
+
+    margin-bottom: 2px;
+}
+
+.technician-category {
+    font-size: 12px;
+    color: var(--muted);
+
+    margin-bottom: 4px;
+}
+
+.technician-rating {
+    font-size: 12px;
+    font-weight: 700;
+
+    color: var(--warning);
+}
+
+.technician-status {
+    display: inline-flex;
+
+    padding: 4px 8px;
+
+    border-radius: 999px;
+
+    background: var(--success-light);
+    color: var(--success);
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.technician-placeholder {
+    padding: 28px 18px;
+
+    text-align: center;
+
+    background: white;
+
+    border: 1px dashed var(--border);
+
+    border-radius: var(--radius);
+}
+
+.technician-placeholder-icon {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.technician-placeholder h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.technician-placeholder p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* =========================================================
+   12. HOW IT WORKS
+========================================================= */
+
+.steps-grid {
+    display: grid;
+    gap: 14px;
+}
+
+.step-card {
+    position: relative;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    padding: 20px;
+
+    box-shadow: var(--shadow-sm);
+}
+
+.step-number {
+    width: 38px;
+    height: 38px;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--primary);
+    color: white;
+
+    border-radius: 11px;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    margin-bottom: 13px;
+}
+
+.step-card h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.step-card p {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+/* =========================================================
+   13. TRUST
+========================================================= */
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+.trust-card {
+    padding: 18px 14px;
+
+    text-align: center;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow-sm);
+}
+
+.trust-icon {
+    font-size: 25px;
+    margin-bottom: 7px;
+}
+
+.trust-card h3 {
+    font-size: 13px;
+    margin-bottom: 3px;
+}
+
+.trust-card p {
+    font-size: 11px;
+    color: var(--muted);
+}
+
+/* =========================================================
+   14. TECHNICIAN CTA
+========================================================= */
+
+.technician-cta {
+    padding: 0 0 42px;
+}
+
+.cta-box {
+    position: relative;
+    overflow: hidden;
+
+    padding: 28px 22px;
+
+    border-radius: var(--radius-lg);
+
+    background:
+        linear-gradient(
+            135deg,
+            #1e293b,
+            #0f172a
+        );
+
+    color: white;
+}
+
+.cta-box::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    right: -80px;
+    top: -80px;
+
+    border-radius: 50%;
+
+    background: rgba(59, 130, 246, 0.2);
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+}
+
+.cta-box h2 {
+    font-size: 23px;
+    line-height: 1.2;
+
+    margin-bottom: 8px;
+}
+
+.cta-box p {
+    max-width: 550px;
+
+    color: #cbd5e1;
+
+    font-size: 13px;
+
+    margin-bottom: 18px;
+}
+
+/* =========================================================
+   15. BUTTONS
+========================================================= */
+
+.btn {
+    min-height: 44px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 0 18px;
+
+    border-radius: 12px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+.btn-secondary {
+    background: #f1f5f9;
+    color: var(--dark);
+}
+
+.btn-secondary:hover {
+    background: #e2e8f0;
+}
+
+.btn-success {
+    background: var(--success);
+    color: white;
+}
+
+.btn-danger {
+    background: var(--danger);
+    color: white;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+/* =========================================================
+   16. FOOTER
+========================================================= */
+
+.site-footer {
+    padding: 35px 0 95px;
+
+    background: var(--dark);
+
+    color: white;
+}
+
+.footer-content {
+    display: grid;
+    gap: 25px;
+}
+
+.footer-brand h2 {
+    font-size: 18px;
+    margin-bottom: 7px;
+}
+
+.footer-brand p {
+    max-width: 450px;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+}
+
+.footer-links h3 {
+    font-size: 13px;
+
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    display: block;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+
+    margin-bottom: 6px;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    margin-top: 25px;
+    padding-top: 18px;
+
+    border-top: 1px solid #1e293b;
+
+    color: #64748b;
+
+    font-size: 11px;
+
+    text-align: center;
+}
+
+/* =========================================================
+   17. BOTTOM NAVIGATION
+========================================================= */
+
+.bottom-nav {
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: 1100;
+
+    height: 70px;
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    background: rgba(255, 255, 255, 0.96);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border-top: 1px solid var(--border);
+
+    box-shadow:
+        0 -5px 25px rgba(15, 23, 42, 0.07);
+
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+.bottom-nav button {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 3px;
+
+    background: transparent;
+
+    color: #64748b;
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+.bottom-nav button span:first-child {
+    font-size: 20px;
+    line-height: 1;
+}
+
+.bottom-nav button.active {
+    color: var(--primary);
+}
+
+.bottom-nav button.active::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    width: 30px;
+    height: 3px;
+
+    border-radius: 0 0 5px 5px;
+
+    background: var(--primary);
+}
+
+/* =========================================================
+   18. MODAL
+========================================================= */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 2000;
+
+    display: none;
+
+    align-items: flex-end;
+    justify-content: center;
+
+    padding: 0;
+
+    background: rgba(15, 23, 42, 0.55);
+
+    backdrop-filter: blur(5px);
+}
+
+.modal.show,
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    width: 100%;
+    max-height: 92vh;
+
+    overflow-y: auto;
+
+    background: white;
+
+    border-radius: 22px 22px 0 0;
+
+    padding: 22px 18px;
+
+    box-shadow: var(--shadow-lg);
+
+    animation: modalUp 0.25s ease;
+}
+
+@keyframes modalUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+.modal-title {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.modal-close {
+    width: 38px;
+    height: 38px;
+
+    display: grid;
+    place-items: center;
+
+    flex: 0 0 38px;
+
+    border-radius: 10px;
+
+    background: #f1f5f9;
+
+    color: var(--dark);
+
+    font-size: 20px;
+}
+
+.modal-close:hover {
+    background: #e2e8f0;
+}
+
+/* =========================================================
+   19. FORM
+========================================================= */
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    color: var(--dark);
+}
+
+.form-control {
+    width: 100%;
+
+    min-height: 46px;
+
+    padding: 10px 13px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 11px;
+
+    background: white;
+
+    color: var(--dark);
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+textarea.form-control {
+    min-height: 100px;
+    resize: vertical;
+}
+
+select.form-control {
+    cursor: pointer;
+}
+
+.form-control:focus {
+    border-color: #60a5fa;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-control::placeholder {
+    color: #94a3b8;
+}
+
+.form-help {
+    display: block;
+
+    margin-top: 5px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+}
+
+.form-actions {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 9px;
+
+    margin-top: 20px;
+}
+
+/* =========================================================
+   20. ESTIMATED PRICE
+========================================================= */
+
+.price-preview {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding: 14px;
+
+    background: var(--primary-light);
+
+    border: 1px solid #dbeafe;
+
+    border-radius: 12px;
+
+    margin-bottom: 16px;
+}
+
+.price-preview-label {
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+.price-preview-value {
+    color: var(--primary);
+
+    font-size: 17px;
+    font-weight: 800;
+}
+
+/* =========================================================
+   21. ORDER LIST
+========================================================= */
+
+.orders-list {
+    display: grid;
+    gap: 12px;
+}
+
+.order-card {
+    padding: 15px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    background: white;
+}
+
+.order-header {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-bottom: 10px;
+}
+
+.order-code {
+    font-size: 12px;
+    font-weight: 800;
+
+    color: var(--dark);
+}
+
+.order-date {
+    color: var(--muted);
+    font-size: 10px;
+}
+
+.order-status {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 5px 9px;
+
+    border-radius: 999px;
+
+    background: var(--warning-light);
+
+    color: var(--warning);
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+.order-service {
+    font-size: 14px;
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+.order-total {
+    color: var(--primary);
+
+    font-size: 14px;
+    font-weight: 800;
+}
+
+/* =========================================================
+   22. PROFILE
+========================================================= */
+
+.profile-box {
+    text-align: center;
+
+    padding: 10px 0 20px;
+}
+
+.profile-avatar {
+    width: 76px;
+    height: 76px;
+
+    display: grid;
+    place-items: center;
+
+    margin: 0 auto 12px;
+
+    border-radius: 50%;
+
+    background: var(--primary-light);
+
+    color: var(--primary);
+
+    font-size: 32px;
+}
+
+.profile-name {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.profile-phone {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* =========================================================
+   23. NOTIFICATION
+========================================================= */
+
+.notification-list {
+    display: grid;
+    gap: 10px;
+}
+
+.notification-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 11px;
+
+    padding: 13px;
+
+    border-radius: 12px;
+
+    background: #f8fafc;
+}
+
+.notification-icon {
+    width: 36px;
+    height: 36px;
+
+    flex: 0 0 36px;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--primary-light);
+
+    border-radius: 10px;
+
+    font-size: 16px;
+}
+
+.notification-item h4 {
+    font-size: 12px;
+
+    margin-bottom: 2px;
+}
+
+.notification-item p {
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+/* =========================================================
+   24. TOAST
+========================================================= */
+
+.toast {
+    position: fixed;
+
+    left: 50%;
+
+    bottom: 84px;
+
+    z-index: 3000;
+
+    width: max-content;
+    max-width: calc(100% - 32px);
+
+    padding: 12px 16px;
+
+    background: var(--dark);
+    color: white;
+
+    border-radius: 11px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    box-shadow: var(--shadow-lg);
+
+    transform:
+        translate(-50%, 20px);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease,
+        visibility 0.25s ease;
+}
+
+.toast.show {
+    opacity: 1;
+    visibility: visible;
+
+    transform:
+        translate(-50%, 0);
+}
+
+/* =========================================================
+   25. LOADING
+========================================================= */
+
+.loading {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 25px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+.spinner {
+    width: 18px;
+    height: 18px;
+
+    border: 2px solid #dbeafe;
+    border-top-color: var(--primary);
+
+    border-radius: 50%;
+
+    animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =========================================================
+   26. HIDDEN
+========================================================= */
+
+.hidden {
+    display: none !important;
+}
+
+/* =========================================================
+   27. SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* =========================================================
+   28. TABLET
+========================================================= */
+
+@media (min-width: 600px) {
+
+    .category-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .service-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .technician-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .trust-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .footer-content {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+
+    .modal {
+        align-items: center;
+        padding: 20px;
+    }
+
+    .modal-content {
+        max-width: 540px;
+
+        border-radius: 22px;
+
+        max-height: 90vh;
+    }
+
+    .form-actions {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* =========================================================
+   29. TABLET LANDSCAPE
+========================================================= */
+
+@media (min-width: 768px) {
+
+    body {
+        padding-bottom: 0;
+    }
+
+    .container {
+        width: min(100% - 48px, var(--container));
+    }
+
+    .hero {
+        padding: 70px 0;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .section {
+        padding: 55px 0;
+    }
+
+    .bottom-nav {
+        display: none;
+    }
+
+    .service-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .technician-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .steps-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .cta-box {
+        padding: 40px;
+    }
+
+    .site-footer {
+        padding-bottom: 40px;
+    }
+}
+
+/* =========================================================
+   30. DESKTOP
+========================================================= */
+
+@media (min-width: 992px) {
+
+    .header-inner {
+        min-height: 76px;
+    }
+
+    .logo img {
+        width: 46px;
+        height: 46px;
+    }
+
+    .logo-title {
+        font-size: 18px;
+    }
+
+    .hero {
+        min-height: 520px;
+
+        display: flex;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 58px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .service-card {
+        padding: 20px;
+    }
+
+    .technician-card {
+        padding: 18px;
+    }
+}
+
+/* =========================================================
+   31. LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1200px) {
+
+    .hero {
+        padding: 90px 0;
+    }
+
+    .hero h1 {
+        max-width: 760px;
+        font-size: 64px;
+    }
+
+    .hero p {
+        max-width: 650px;
+        font-size: 17px;
+    }
+
+    .service-list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+    }
+
+    .technician-list {
+        gap: 18px;
+    }
+
+    .steps-grid {
+        gap: 18px;
+    }
+}
+
+/* =========================================================
+   32. ACCESSIBILITY
+========================================================= */
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+a:focus-visible {
+    outline: 3px solid rgba(37, 99, 235, 0.25);
+    outline-offset: 2px;
+}
+
+/* =========================================================
+   33. REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
